@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(55deg,#660a02c2,#ff6b01e2);
+}
+.Bigpart{
+    width: 84%;
+    margin: 0 auto;
+}
+.haeder>h1{
+    color: rgb(65, 2, 2);
+    line-height: 2.7;
+}
+.haeder{
+    justify-content:space-between;
+    display: flex; 
+    padding: 10px;  
+}
+.link>a{
+    cursor: pointer;
+    color: rgb(45, 30, 30);
+    text-decoration: none;
+    margin-left: 20px;
+    width: 80px;
+    height: 85px;
+    padding: 18px;
+    color: white;
+    line-height: 1;
+    text-align: center;
+    background: linear-gradient(55deg,#330606,#ff0000d5);
+    border-radius: 20px;
+
+}
+.link{
+    line-height: 6.3;
+}
+.logo>img{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+}
+.part1{
+    display: flex;
+    justify-content: space-around;
+}
+.b1>img{
+    width: 220px;
+    height: 250px;
+    border-radius: 15px;
+}
+.b1>h3{
+    color: aliceblue;
+}
+.b2>img{
+    width: 220px;
+    height: 250px;
+    border-radius: 15px;
+}
+.b2>h3{
+    color: aliceblue;
+}
+.b3>img{
+    width: 220px;
+    height: 250px;
+    border-radius: 15px;
+}
+.b3>h3{
+    color: aliceblue;
+}
+.b4>img{
+    width: 220px;
+    height: 250px;
+    border-radius: 15px;
+}
+.b4>h3{
+    color: aliceblue;
+}
+.part2{
+    display: flex;
+    justify-content: space-around;    
+}
+.part3{
+    display: flex;
+    justify-content: space-around;    
+}
+.boglanish{
+    display: flex;
+    justify-content: space-between;
+}
+.logo2>img{
+    border-radius: 50%;
+}
+.bog{
+    width: 500px;
+    height: 200px;
+    background-color: rgba(240, 248, 255, 0.192);
+    padding: 20px;
+    color: aliceblue;
+    border-radius: 20px;
+}
+.footer{
+    display: flex;
+    text-align: center;
+}
+.link{
+    text-align: center;
+}
