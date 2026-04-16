@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening Onlayn Do'konim</title>
+    <style>
+        /* Umumiy ko'rinish */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigatsiya paneli */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        /* Mahsulotlar konteyneri */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Mahsulot kartochkasi */
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 15px;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 150px;
+            border-radius: 5px;
+        }
+
+        .price {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        button {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #d35400;
+        }
+
+        /* Savatcha bo'limi */
+        .cart-section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Super Savdo Do'koni</h1>
+    <p>Sifatli mahsulotlar faqat bizda!</p>
+</header>
+
+<div class="container">
+    <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Smartfon">
+        <h3>iPhone 15 Pro</h3>
+        <p class="price">15,000,000 so'm</p>
+        <button onclick="addToCart('iPhone 15 Pro', 15000000)">Savatchaga qo'shish</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Noutbuk">
+        <h3>MacBook Air M2</h3>
+        <p class="price">12,500,000 so'm</p>
+        <button onclick="addToCart('MacBook Air M2', 12500000)">Savatchaga qo'shish</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Quloqchin">
+        <h3>AirPods Pro 2</h3>
+        <p class="price">2,800,000 so'm</p>
+        <button onclick="addToCart('AirPods Pro 2', 28000000)">Savatchaga qo'shish</button>
+    </div>
+</div>
+
+<div class="cart-section">
+    <h2>Xarid savatchasi</h2>
+    <ul id="cart-items">
+        </ul>
+    <hr>
+    <p><strong>Jami summa: </strong> <span id="total-price">0</span> so'm</p>
+    <button onclick="clearCart()">Savatchani tozalash</button>
+</div>
+
+<script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(name, price) {
+        cart.push({name, price});
+        total += price;
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartList = document.getElementById('cart-items');
+        const totalPrice = document.getElementById('total-price');
+        
+        cartList.innerHTML = '';
+        cart.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - ${item.price.toLocaleString()} so'm`;
+            cartList.appendChild(li);
+        });
+
+        totalPrice.textContent = total.toLocaleString();
+    }
+
+    function clearCart() {
+        cart = [];
+        total = 0;
+        updateCart();
+    }
+</script>
+
+</body>
+</html>
