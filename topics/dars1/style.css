@@ -1,0 +1,26 @@
+.ota {
+	text-align: center;
+}
+
+li {
+	width: 400px;
+	height: 70px;
+	background-color: brown;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 4;
+	color: aliceblue;
+	display: inline-block;
+	margin-top: 20px;
+	border-radius: 6px;
+}
+
+button {
+	border-radius: 6px;
+	margin-top: 20px;
+	padding: 10px 30px;
+	font-size: 18px;
+	color: white;
+	background-color: blue;
+}
