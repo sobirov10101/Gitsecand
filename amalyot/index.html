@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS - style -->
+	<link rel="stylesheet" href="./css/style.css">
+
+	<title>Document</title>
+
+	<!-- FONT AWESON -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+
+<body>
+
+	<div class="wrapper">
+		<!-- BTN -->
+		<button class="btn show-btn" id="show-btn">Show Modal</button>
+
+		<!-- Modal-->
+		<div class="modal hidden" id="modal">
+			<!-- MODAL HEADRE -->
+			<div class="modal modal-header ">
+				<h3 class='modal-header'>I love BMW </h3>
+				<button class="btn close-btn " id='close-btn'>
+					<i class="fas fa-close"></i>
+				</button>
+				<!-- MODAL BODY -->
+
+				<div class="modal-body">
+					<h2 class="modal-title">Modal title</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime repellat error et atque quidem aperiam
+						sequi
+						eaque, vel reiciendis officiis incidunt nobis amet architecto beatae nostrum doloribus libero, ullam
+						exercitationem, eveniet nisi quae rem? Porro doloremque similique molestias sint aperiam voluptatum unde!
+						Nam,
+						velit facilis!
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Overlay	 -->
+	<div class="overlay hidden" id="overlay">
+
+	</div>
+
+
+
+	<!-- JS -->
+	<script src="./app.js"></script>
+</body>
+
+</html>
